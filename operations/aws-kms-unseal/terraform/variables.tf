@@ -15,3 +15,7 @@ variable vpc_cidr {
 variable vault_url {
   description = "URL to download Vault Enterprise"
 }
+
+variable ssh_key_name {
+  description = "Pre-exisiting ssh key name for access to Vault instance."
+}
