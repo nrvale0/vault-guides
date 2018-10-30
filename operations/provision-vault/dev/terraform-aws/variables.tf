@@ -64,3 +64,8 @@ variable "vault_tags_list" {
   type    = "list"
   default = [ ]
 }
+
+variable "vault_user-data" {
+  type    = "string"
+  default = ""
+}

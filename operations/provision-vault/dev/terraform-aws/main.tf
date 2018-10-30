@@ -97,6 +97,7 @@ module "vault_aws" {
 ${data.template_file.base_install.rendered} # Runtime install base tools
 ${var.consul_install ? data.template_file.consul_install.rendered : "echo \"Skip Consul install\""} # Runtime install Consul in -dev mode
 ${data.template_file.vault_install.rendered} # Runtime install Vault in -dev mode
+${var.vault_user-data}
 EOF
 
   target_groups = ["${compact(
